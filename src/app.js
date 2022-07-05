@@ -16,16 +16,18 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-
+  function generator(myArr) {
+    return myArr[Math.floor(Math.random() * myArr.length)];
+  }
   function excuser() {
     return (
-      who[Math.floor(Math.random() * who.length)] +
+      generator(who) +
       " " +
-      action[Math.floor(Math.random() * action.length)] +
+      generator(action) +
       " " +
-      what[Math.floor(Math.random() * what.length)] +
+      generator(what) +
       " " +
-      when[Math.floor(Math.random() * when.length)]
+      generator(when)
     );
   }
   const text = document.getElementById("excuse");
