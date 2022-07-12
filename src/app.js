@@ -5,8 +5,7 @@ import "./style.css";
 import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
-window.onload = function() {
-  let who = ["The dog", "My grandma", "His turtle", "My bird"];
+let who = ["The dog", "My grandma", "His turtle", "My bird"];
   let action = ["ate", "peed", "crushed", "broke"];
   let what = ["my homework", "the keys", "the car"];
   let when = [
@@ -16,7 +15,8 @@ window.onload = function() {
     "during my lunch",
     "while I was praying"
   ];
-  function generator(myArr) {
+
+function generator(myArr) {
     return myArr[Math.floor(Math.random() * myArr.length)];
   }
   function excuser() {
@@ -30,6 +30,8 @@ window.onload = function() {
       generator(when)
     );
   }
+
+window.onload = function() {
   const text = document.getElementById("excuse");
   text.innerHTML = excuser();
 };
